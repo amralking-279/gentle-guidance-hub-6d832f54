@@ -613,9 +613,9 @@ html.app-template-prayer-now body {
   background: linear-gradient(180deg, #f6ecd6 0%, #efe2c4 100%) !important;
   color: #1d3a2a !important;
 }
-/* Hide the original top navigation + footer — bottom tab takes over */
-html.app-template-prayer-now > body nav.fixed,
-html.app-template-prayer-now body > * nav.fixed:not(.app-template-tab),
+/* Hide the original top navigation + footer — bottom tab takes over.
+   The bottom tab uses `fixed bottom-0` so the `.top-0` selector spares it. */
+html.app-template-prayer-now nav.fixed.top-0,
 html.app-template-prayer-now footer {
   display: none !important;
 }
