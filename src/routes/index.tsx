@@ -7,7 +7,7 @@ import FeaturesSection from "@/components/home/FeaturesSection";
 import AboutSection from "@/components/home/AboutSection";
 import ContactSection from "@/components/home/ContactSection";
 import SurahListSection from "@/components/home/SurahListSection";
-import { PrayerNowHome } from "@/components/templates/PrayerNowHome";
+import { FajrHome } from "@/components/templates/FajrHome";
 import { readStoredAppTemplate, type AppTemplateId, DEFAULT_APP_TEMPLATE } from "@/lib/appTemplates";
 
 export const Route = createFileRoute("/")({
@@ -25,9 +25,9 @@ function HomePage() {
     return () => window.removeEventListener('storage', onStorage);
   }, []);
 
-  if (template === 'prayer-now') {
+  if (template === 'fajr') {
     return (
-      <PrayerNowHome />
+      <FajrHome />
     );
   }
 

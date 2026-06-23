@@ -25,7 +25,7 @@ import { UpdateReminder } from "@/components/ui-custom/UpdateReminder";
 import { AppSplashScreen } from "@/components/native/SplashScreen";
 import { NativeBackHandler } from "@/components/native/NativeBackHandler";
 import { Toaster } from "@/components/ui/sonner";
-import { PrayerNowBottomTab } from "@/components/templates/PrayerNowBottomTab";
+import { FajrBottomTab } from "@/components/templates/FajrBottomTab";
 import { ThemeQuickButton } from "@/components/ui-custom/ThemeQuickButton";
 import {
   readStoredAppTemplate,
@@ -135,7 +135,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <script
           // Apply the saved theme + display mode before paint to avoid a flash of defaults.
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('app:theme');if(t&&['default','firouz','layali','dhahab'].indexOf(t)>=0){document.documentElement.classList.add('theme-'+t);}var d=localStorage.getItem('app:display');if(d&&['glass','soft','minimal','elevated'].indexOf(d)>=0){document.documentElement.classList.add('display-'+d);}var a=localStorage.getItem('app:template');if(a&&['prayer-now'].indexOf(a)>=0){document.documentElement.classList.add('app-template-'+a);}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('app:theme');if(t&&['default','firouz','layali','dhahab'].indexOf(t)>=0){document.documentElement.classList.add('theme-'+t);}var d=localStorage.getItem('app:display');if(d&&['glass','soft','minimal','elevated'].indexOf(d)>=0){document.documentElement.classList.add('display-'+d);}var a=localStorage.getItem('app:template');if(a&&['fajr','prayer-now'].indexOf(a)>=0){document.documentElement.classList.add('app-template-fajr');}}catch(e){}})();`,
           }}
         />
       </head>
@@ -180,10 +180,10 @@ function RootComponent() {
               <UpdateReminder />
               <NativeBackHandler />
               <Toaster position="top-center" richColors closeButton dir="rtl" />
-              {template === "prayer-now" && (
+              {template === "fajr" && (
                 <>
                   <ThemeQuickButton />
-                  <PrayerNowBottomTab />
+                  <FajrBottomTab />
                 </>
               )}
             </AudioProvider>

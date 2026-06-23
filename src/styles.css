@@ -603,90 +603,90 @@ html.display-elevated a[class*="bg-emerald"]:not([class*="rounded-full"]):hover 
 }
 
 /* ===================================================================
-   App template: قالب الفجر (prayer-now) — applied globally to every page.
+   App template: قالب الفجر — applied globally to every page.
    Reskins the dark emerald shell into a warm cream/beige Fajr palette,
    hides the desktop Navbar + Footer in favor of the bottom tab bar,
    and reserves space for the fixed bottom tab.
    =================================================================== */
-html.app-template-prayer-now,
-html.app-template-prayer-now body {
+html.app-template-fajr,
+html.app-template-fajr body {
   background: linear-gradient(180deg, #faf3e3 0%, #f0e2c4 100%) !important;
   color: #2d4a3a !important;
 }
 /* Hide the original top navigation + footer — bottom tab takes over.
    The bottom tab uses `fixed bottom-0` so the `.top-0` selector spares it. */
-html.app-template-prayer-now nav.fixed.top-0,
-html.app-template-prayer-now footer {
+html.app-template-fajr nav.fixed.top-0,
+html.app-template-fajr footer {
   display: none !important;
 }
 /* Reserve room for the fixed bottom tab on every page */
-html.app-template-prayer-now body {
+html.app-template-fajr body {
   padding-bottom: calc(72px + env(safe-area-inset-bottom)) !important;
 }
 /* Neutralize the dark page backgrounds used across routes */
-html.app-template-prayer-now main.min-h-screen,
-html.app-template-prayer-now .bg-\[\#030a06\],
-html.app-template-prayer-now .bg-\[\#020806\],
-html.app-template-prayer-now .bg-\[\#04130c\],
-html.app-template-prayer-now .bg-\[\#051a12\] {
+html.app-template-fajr main.min-h-screen,
+html.app-template-fajr .bg-\[\#030a06\],
+html.app-template-fajr .bg-\[\#020806\],
+html.app-template-fajr .bg-\[\#04130c\],
+html.app-template-fajr .bg-\[\#051a12\] {
   background: transparent !important;
   background-color: transparent !important;
 }
 /* Card / surface tints — soft cream cards over the warm background */
-html.app-template-prayer-now [class*="bg-emerald-950"],
-html.app-template-prayer-now [class*="bg-emerald-900"],
-html.app-template-prayer-now [class*="bg-emerald-800"],
-html.app-template-prayer-now .bg-card,
-html.app-template-prayer-now .bg-popover {
+html.app-template-fajr [class*="bg-emerald-950"],
+html.app-template-fajr [class*="bg-emerald-900"],
+html.app-template-fajr [class*="bg-emerald-800"],
+html.app-template-fajr .bg-card,
+html.app-template-fajr .bg-popover {
   background-color: #fffdf5 !important;
   border-color: rgba(201, 164, 73, 0.28) !important;
   color: #2d4a3a !important;
   box-shadow: 0 8px 24px -12px rgba(120, 78, 30, 0.18) !important;
 }
 /* Headings + body text — warm dark emerald */
-html.app-template-prayer-now h1,
-html.app-template-prayer-now h2,
-html.app-template-prayer-now h3,
-html.app-template-prayer-now h4,
-html.app-template-prayer-now h5,
-html.app-template-prayer-now h6,
-html.app-template-prayer-now p,
-html.app-template-prayer-now span,
-html.app-template-prayer-now li,
-html.app-template-prayer-now label,
-html.app-template-prayer-now a {
+html.app-template-fajr h1,
+html.app-template-fajr h2,
+html.app-template-fajr h3,
+html.app-template-fajr h4,
+html.app-template-fajr h5,
+html.app-template-fajr h6,
+html.app-template-fajr p,
+html.app-template-fajr span,
+html.app-template-fajr li,
+html.app-template-fajr label,
+html.app-template-fajr a {
   color: inherit;
 }
-html.app-template-prayer-now .text-white,
-html.app-template-prayer-now .text-gray-100,
-html.app-template-prayer-now .text-gray-200,
-html.app-template-prayer-now .text-gray-300,
-html.app-template-prayer-now .text-gray-400,
-html.app-template-prayer-now [class*="text-emerald-50"],
-html.app-template-prayer-now [class*="text-emerald-100"],
-html.app-template-prayer-now [class*="text-emerald-200"],
-html.app-template-prayer-now [class*="text-emerald-300"] {
+html.app-template-fajr .text-white,
+html.app-template-fajr .text-gray-100,
+html.app-template-fajr .text-gray-200,
+html.app-template-fajr .text-gray-300,
+html.app-template-fajr .text-gray-400,
+html.app-template-fajr [class*="text-emerald-50"],
+html.app-template-fajr [class*="text-emerald-100"],
+html.app-template-fajr [class*="text-emerald-200"],
+html.app-template-fajr [class*="text-emerald-300"] {
   color: #2d4a3a !important;
 }
-html.app-template-prayer-now [class*="text-emerald-400"],
-html.app-template-prayer-now [class*="text-emerald-500"] {
+html.app-template-fajr [class*="text-emerald-400"],
+html.app-template-fajr [class*="text-emerald-500"] {
   color: #1f6b4a !important;
 }
-html.app-template-prayer-now [class*="text-gray-500"],
-html.app-template-prayer-now [class*="text-gray-600"] {
+html.app-template-fajr [class*="text-gray-500"],
+html.app-template-fajr [class*="text-gray-600"] {
   color: #6b8472 !important;
 }
-html.app-template-prayer-now [class*="text-gold"],
-html.app-template-prayer-now [class*="text-amber-3"],
-html.app-template-prayer-now [class*="text-amber-4"],
-html.app-template-prayer-now [class*="text-amber-5"] {
+html.app-template-fajr [class*="text-gold"],
+html.app-template-fajr [class*="text-amber-3"],
+html.app-template-fajr [class*="text-amber-4"],
+html.app-template-fajr [class*="text-amber-5"] {
   color: #c9a449 !important;
 }
 /* Primary accent buttons keep emerald fill but ensure cream text */
-html.app-template-prayer-now button[class*="bg-emerald-6"],
-html.app-template-prayer-now button[class*="bg-emerald-5"],
-html.app-template-prayer-now a[class*="bg-emerald-6"],
-html.app-template-prayer-now a[class*="bg-emerald-5"] {
+html.app-template-fajr button[class*="bg-emerald-6"],
+html.app-template-fajr button[class*="bg-emerald-5"],
+html.app-template-fajr a[class*="bg-emerald-6"],
+html.app-template-fajr a[class*="bg-emerald-5"] {
   background-image: linear-gradient(135deg, #1f6b4a 0%, #2d8a5f 100%) !important;
   background-color: #1f6b4a !important;
   color: #fdf6e3 !important;
@@ -694,26 +694,26 @@ html.app-template-prayer-now a[class*="bg-emerald-5"] {
   box-shadow: 0 10px 22px -10px rgba(31, 107, 74, 0.45) !important;
 }
 /* Borders that used emerald-900/30 etc. become warm sand */
-html.app-template-prayer-now [class*="border-emerald-9"],
-html.app-template-prayer-now [class*="border-emerald-8"],
-html.app-template-prayer-now [class*="border-emerald-7"] {
+html.app-template-fajr [class*="border-emerald-9"],
+html.app-template-fajr [class*="border-emerald-8"],
+html.app-template-fajr [class*="border-emerald-7"] {
   border-color: rgba(201, 164, 73, 0.3) !important;
 }
 /* Dividers / hairline lines tint to gold */
-html.app-template-prayer-now hr,
-html.app-template-prayer-now [class*="divide-emerald"] > * + * {
+html.app-template-fajr hr,
+html.app-template-fajr [class*="divide-emerald"] > * + * {
   border-color: rgba(201, 164, 73, 0.28) !important;
 }
 /* Inputs adapt to the warm palette */
-html.app-template-prayer-now input,
-html.app-template-prayer-now textarea,
-html.app-template-prayer-now select {
+html.app-template-fajr input,
+html.app-template-fajr textarea,
+html.app-template-fajr select {
   background-color: #fffdf5 !important;
   color: #2d4a3a !important;
   border-color: rgba(201, 164, 73, 0.4) !important;
 }
-html.app-template-prayer-now input::placeholder,
-html.app-template-prayer-now textarea::placeholder {
+html.app-template-fajr input::placeholder,
+html.app-template-fajr textarea::placeholder {
   color: #a89678 !important;
 }
 /* Allow the bottom tab itself to keep its dark emerald look — it’s in the

@@ -27,7 +27,7 @@ import {
   readStoredAppTemplate,
   storeAppTemplate,
 } from "@/lib/appTemplates";
-import prayerNowPreview from "@/assets/prayer-now-header.jpg";
+import fajrPreview from "@/assets/fajr-header.jpg";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/more/themes")({
@@ -257,14 +257,14 @@ function ThemesPage() {
             ? "اختر لون التطبيق، عاينه، ثم اضغط \"تطبيق هذا اللون\" لحفظه."
             : tab === "display"
               ? "اختر نمط العرض (الإحساس والشكل)، عاينه، ثم اضغط \"تطبيق هذا النمط\". يعمل مع أي لون."
-              : "اختر شكل واجهة التطبيق بالكامل. الأصلي افتراضي، أو جرّب قالب «براير ناو» العصري."}
+              : "اختر شكل واجهة التطبيق بالكامل. الأصلي افتراضي، أو جرّب قالب «الفجر» العصري."}
         </p>
 
         {tab === "template" ? (
           <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {APP_TEMPLATES.map((t) => {
               const isApplied = appliedTemplate === t.id;
-              const isPrayerNow = t.id === "prayer-now";
+              const isFajr = t.id === "fajr";
               return (
                 <motion.div
                   key={t.id}
@@ -275,9 +275,9 @@ function ThemesPage() {
                   }`}
                 >
                   <div className="relative aspect-[16/11] overflow-hidden bg-[#0a1f17]">
-                    {isPrayerNow ? (
+                    {isFajr ? (
                       <>
-                        <img src={prayerNowPreview} alt="معاينة قالب براير ناو" className="w-full h-full object-cover" />
+                        <img src={fajrPreview} alt="معاينة قالب الفجر" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-black/15 flex items-center justify-center">
                           <div className="text-white text-center font-cairo" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.55)' }}>
                             <div className="text-xs opacity-90">الشروق</div>
