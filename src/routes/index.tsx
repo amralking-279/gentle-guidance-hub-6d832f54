@@ -8,7 +8,6 @@ import AboutSection from "@/components/home/AboutSection";
 import ContactSection from "@/components/home/ContactSection";
 import SurahListSection from "@/components/home/SurahListSection";
 import { PrayerNowHome } from "@/components/templates/PrayerNowHome";
-import { PrayerNowBottomTab } from "@/components/templates/PrayerNowBottomTab";
 import { readStoredAppTemplate, type AppTemplateId, DEFAULT_APP_TEMPLATE } from "@/lib/appTemplates";
 
 export const Route = createFileRoute("/")({
