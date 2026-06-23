@@ -25,6 +25,12 @@ import { UpdateReminder } from "@/components/ui-custom/UpdateReminder";
 import { AppSplashScreen } from "@/components/native/SplashScreen";
 import { NativeBackHandler } from "@/components/native/NativeBackHandler";
 import { Toaster } from "@/components/ui/sonner";
+import { PrayerNowBottomTab } from "@/components/templates/PrayerNowBottomTab";
+import {
+  readStoredAppTemplate,
+  type AppTemplateId,
+  DEFAULT_APP_TEMPLATE,
+} from "@/lib/appTemplates";
 
 function NotFoundComponent() {
   return (
@@ -143,6 +149,16 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const [splashDone, setSplashDone] = useState(false);
+  const [template, setTemplate] = useState<AppTemplateId>(DEFAULT_APP_TEMPLATE);
+
+  useEffect(() => {
+    setTemplate(readStoredAppTemplate());
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "app:template") setTemplate(readStoredAppTemplate());
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -163,7 +179,7 @@ function RootComponent() {
               <UpdateReminder />
               <NativeBackHandler />
               <Toaster position="top-center" richColors closeButton dir="rtl" />
-
+              {template === "prayer-now" && <PrayerNowBottomTab />}
             </AudioProvider>
           </ProgressProvider>
         </FavoritesProvider>
