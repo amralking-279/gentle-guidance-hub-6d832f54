@@ -603,7 +603,7 @@ html.display-elevated a[class*="bg-emerald"]:not([class*="rounded-full"]):hover 
 }
 
 /* ===================================================================
-   App template: قالب الفجر (prayer-now) — applied globally to every page.
+   App template: قالب الفجر — applied globally to every page.
    Reskins the dark emerald shell into a warm cream/beige Fajr palette,
    hides the desktop Navbar + Footer in favor of the bottom tab bar,
    and reserves space for the fixed bottom tab.
