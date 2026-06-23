@@ -72,7 +72,7 @@ export function PrayerNowHome() {
           className="absolute top-3 left-3 w-9 h-9 rounded-full bg-black/35 backdrop-blur-md text-white flex items-center justify-center hover:bg-black/50 transition"
           aria-label="إعدادات الشكل"
         >
-          <Settings className="w-5 h-5" />
+          <Settings2 className="w-5 h-5" />
         </Link>
         <button
           className="absolute top-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-amber-400/95 text-amber-950 px-3 py-1 font-cairo text-[11px] font-bold shadow"
