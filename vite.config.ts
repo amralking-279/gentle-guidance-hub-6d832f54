@@ -12,4 +12,17 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@capacitor/core',
+        '@capacitor/local-notifications',
+        '@capacitor/app',
+        '@capacitor/splash-screen',
+        '@capacitor/browser',
+        '@capacitor/filesystem',
+        '@capacitor/app-launcher',
+      ],
+    },
+  },
 });
