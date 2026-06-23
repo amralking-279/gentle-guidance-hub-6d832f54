@@ -28,10 +28,7 @@ function HomePage() {
 
   if (template === 'prayer-now') {
     return (
-      <>
-        <PrayerNowHome />
-        <PrayerNowBottomTab />
-      </>
+      <PrayerNowHome />
     );
   }
 
