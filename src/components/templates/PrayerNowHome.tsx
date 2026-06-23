@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Settings, Share2, MapPin, BookOpen, Compass, Calculator, Heart, Users, BookMarked, Sunrise, Sparkles } from 'lucide-react';
+import { Settings2, Share2, MapPin, BookOpenText, Compass, Calculator, HeartHandshake, GraduationCap, BookMarked, Sunrise, Sparkles, Clock4 } from 'lucide-react';
 import { usePrayerData, formatCountdown, to12hArabic, type PrayerKey } from '@/hooks/usePrayerData';
 import headerBg from '@/assets/prayer-now-header.jpg';
 
@@ -13,10 +13,10 @@ const PRAYER_ROW: { key: PrayerKey; label: string; emoji: string }[] = [
 
 const FEATURES = [
   { to: '/more/qibla', label: 'اتجاه القبلة', Icon: Compass },
-  { to: '/more/tasbeeh', label: 'السبحة', Icon: Heart },
+  { to: '/more/tasbeeh', label: 'السبحة', Icon: HeartHandshake },
   { to: '/progress', label: 'الختمة', Icon: BookMarked },
-  { to: '/more/prayer-times', label: 'متتبع الصلاة', Icon: BookOpen },
-  { to: '/more/islamic-education', label: 'تعليم إسلامي', Icon: Users },
+  { to: '/more/prayer-times', label: 'متتبع الصلاة', Icon: Clock4 },
+  { to: '/more/islamic-education', label: 'تعليم إسلامي', Icon: GraduationCap },
   { to: '/more/zakat-calculator', label: 'حاسبة الزكاة', Icon: Calculator },
 ];
 
