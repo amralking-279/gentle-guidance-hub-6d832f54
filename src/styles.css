@@ -719,10 +719,4 @@ html.app-template-prayer-now textarea::placeholder {
 /* Allow the bottom tab itself to keep its dark emerald look — it’s in the
    template’s own component and uses [bg-[#0a1f17]] which doesn't match
    the reset selectors above. */
-/* Prevent accidental tint on the tab bar / floating theme button */
-html.app-template-prayer-now nav.app-template-tab,
-html.app-template-prayer-now nav.app-template-tab * {
-  background-color: revert;
-  color: revert;
-}
 
