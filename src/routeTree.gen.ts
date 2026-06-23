@@ -9,38 +9,530 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ListenRouteImport } from './routes/listen'
+import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as DataPolicyRouteImport } from './routes/data-policy'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ReadIndexRouteImport } from './routes/read.index'
+import { Route as ReadSurahNumberRouteImport } from './routes/read.$surahNumber'
+import { Route as MoreZakatCalculatorRouteImport } from './routes/more.zakat-calculator'
+import { Route as MoreThemesRouteImport } from './routes/more.themes'
+import { Route as MoreTasbeehRouteImport } from './routes/more.tasbeeh'
+import { Route as MoreSettingsRouteImport } from './routes/more.settings'
+import { Route as MoreSalatNabiRouteImport } from './routes/more.salat-nabi'
+import { Route as MoreRuqyahRouteImport } from './routes/more.ruqyah'
+import { Route as MoreQuranLearningRouteImport } from './routes/more.quran-learning'
+import { Route as MoreQiblaRouteImport } from './routes/more.qibla'
+import { Route as MorePrayerTimesRouteImport } from './routes/more.prayer-times'
+import { Route as MoreNamesRouteImport } from './routes/more.names'
+import { Route as MoreIslamicEducationRouteImport } from './routes/more.islamic-education'
+import { Route as MoreHijriCalendarRouteImport } from './routes/more.hijri-calendar'
+import { Route as MoreDownloadsRouteImport } from './routes/more.downloads'
+import { Route as MoreAthkarRouteImport } from './routes/more.athkar'
+import { Route as MoreHadithIndexRouteImport } from './routes/more.hadith.index'
+import { Route as MoreHadithBookRouteImport } from './routes/more.hadith.$book'
+import { Route as ApiPublicVersionRouteImport } from './routes/api/public/version'
+import { Route as ApiPublicTtsSalatNabiDotmp3RouteImport } from './routes/api/public/tts.salat-nabi[.]mp3'
+import { Route as ApiPublicTtsRuqyahRouteImport } from './routes/api/public/tts.ruqyah'
+import { Route as ApiPublicPushUnsubscribeRouteImport } from './routes/api/public/push.unsubscribe'
+import { Route as ApiPublicPushSubscribeRouteImport } from './routes/api/public/push.subscribe'
+import { Route as ApiPublicPushCronRouteImport } from './routes/api/public/push.cron'
+import { Route as ApiPublicPushAnnounceUpdateRouteImport } from './routes/api/public/push.announce-update'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgressRoute = ProgressRouteImport.update({
+  id: '/progress',
+  path: '/progress',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ListenRoute = ListenRouteImport.update({
+  id: '/listen',
+  path: '/listen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FavoritesRoute = FavoritesRouteImport.update({
+  id: '/favorites',
+  path: '/favorites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataPolicyRoute = DataPolicyRouteImport.update({
+  id: '/data-policy',
+  path: '/data-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReadIndexRoute = ReadIndexRouteImport.update({
+  id: '/read/',
+  path: '/read/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReadSurahNumberRoute = ReadSurahNumberRouteImport.update({
+  id: '/read/$surahNumber',
+  path: '/read/$surahNumber',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreZakatCalculatorRoute = MoreZakatCalculatorRouteImport.update({
+  id: '/more/zakat-calculator',
+  path: '/more/zakat-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreThemesRoute = MoreThemesRouteImport.update({
+  id: '/more/themes',
+  path: '/more/themes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreTasbeehRoute = MoreTasbeehRouteImport.update({
+  id: '/more/tasbeeh',
+  path: '/more/tasbeeh',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreSettingsRoute = MoreSettingsRouteImport.update({
+  id: '/more/settings',
+  path: '/more/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreSalatNabiRoute = MoreSalatNabiRouteImport.update({
+  id: '/more/salat-nabi',
+  path: '/more/salat-nabi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreRuqyahRoute = MoreRuqyahRouteImport.update({
+  id: '/more/ruqyah',
+  path: '/more/ruqyah',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreQuranLearningRoute = MoreQuranLearningRouteImport.update({
+  id: '/more/quran-learning',
+  path: '/more/quran-learning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreQiblaRoute = MoreQiblaRouteImport.update({
+  id: '/more/qibla',
+  path: '/more/qibla',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MorePrayerTimesRoute = MorePrayerTimesRouteImport.update({
+  id: '/more/prayer-times',
+  path: '/more/prayer-times',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreNamesRoute = MoreNamesRouteImport.update({
+  id: '/more/names',
+  path: '/more/names',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreIslamicEducationRoute = MoreIslamicEducationRouteImport.update({
+  id: '/more/islamic-education',
+  path: '/more/islamic-education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreHijriCalendarRoute = MoreHijriCalendarRouteImport.update({
+  id: '/more/hijri-calendar',
+  path: '/more/hijri-calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreDownloadsRoute = MoreDownloadsRouteImport.update({
+  id: '/more/downloads',
+  path: '/more/downloads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreAthkarRoute = MoreAthkarRouteImport.update({
+  id: '/more/athkar',
+  path: '/more/athkar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreHadithIndexRoute = MoreHadithIndexRouteImport.update({
+  id: '/more/hadith/',
+  path: '/more/hadith/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoreHadithBookRoute = MoreHadithBookRouteImport.update({
+  id: '/more/hadith/$book',
+  path: '/more/hadith/$book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicVersionRoute = ApiPublicVersionRouteImport.update({
+  id: '/api/public/version',
+  path: '/api/public/version',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicTtsSalatNabiDotmp3Route =
+  ApiPublicTtsSalatNabiDotmp3RouteImport.update({
+    id: '/api/public/tts/salat-nabi.mp3',
+    path: '/api/public/tts/salat-nabi.mp3',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicTtsRuqyahRoute = ApiPublicTtsRuqyahRouteImport.update({
+  id: '/api/public/tts/ruqyah',
+  path: '/api/public/tts/ruqyah',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicPushUnsubscribeRoute =
+  ApiPublicPushUnsubscribeRouteImport.update({
+    id: '/api/public/push/unsubscribe',
+    path: '/api/public/push/unsubscribe',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicPushSubscribeRoute = ApiPublicPushSubscribeRouteImport.update({
+  id: '/api/public/push/subscribe',
+  path: '/api/public/push/subscribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicPushCronRoute = ApiPublicPushCronRouteImport.update({
+  id: '/api/public/push/cron',
+  path: '/api/public/push/cron',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicPushAnnounceUpdateRoute =
+  ApiPublicPushAnnounceUpdateRouteImport.update({
+    id: '/api/public/push/announce-update',
+    path: '/api/public/push/announce-update',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/data-policy': typeof DataPolicyRoute
+  '/favorites': typeof FavoritesRoute
+  '/listen': typeof ListenRoute
+  '/privacy': typeof PrivacyRoute
+  '/progress': typeof ProgressRoute
+  '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
+  '/more/athkar': typeof MoreAthkarRoute
+  '/more/downloads': typeof MoreDownloadsRoute
+  '/more/hijri-calendar': typeof MoreHijriCalendarRoute
+  '/more/islamic-education': typeof MoreIslamicEducationRoute
+  '/more/names': typeof MoreNamesRoute
+  '/more/prayer-times': typeof MorePrayerTimesRoute
+  '/more/qibla': typeof MoreQiblaRoute
+  '/more/quran-learning': typeof MoreQuranLearningRoute
+  '/more/ruqyah': typeof MoreRuqyahRoute
+  '/more/salat-nabi': typeof MoreSalatNabiRoute
+  '/more/settings': typeof MoreSettingsRoute
+  '/more/tasbeeh': typeof MoreTasbeehRoute
+  '/more/themes': typeof MoreThemesRoute
+  '/more/zakat-calculator': typeof MoreZakatCalculatorRoute
+  '/read/$surahNumber': typeof ReadSurahNumberRoute
+  '/read/': typeof ReadIndexRoute
+  '/api/public/version': typeof ApiPublicVersionRoute
+  '/more/hadith/$book': typeof MoreHadithBookRoute
+  '/more/hadith/': typeof MoreHadithIndexRoute
+  '/api/public/push/announce-update': typeof ApiPublicPushAnnounceUpdateRoute
+  '/api/public/push/cron': typeof ApiPublicPushCronRoute
+  '/api/public/push/subscribe': typeof ApiPublicPushSubscribeRoute
+  '/api/public/push/unsubscribe': typeof ApiPublicPushUnsubscribeRoute
+  '/api/public/tts/ruqyah': typeof ApiPublicTtsRuqyahRoute
+  '/api/public/tts/salat-nabi.mp3': typeof ApiPublicTtsSalatNabiDotmp3Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/data-policy': typeof DataPolicyRoute
+  '/favorites': typeof FavoritesRoute
+  '/listen': typeof ListenRoute
+  '/privacy': typeof PrivacyRoute
+  '/progress': typeof ProgressRoute
+  '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
+  '/more/athkar': typeof MoreAthkarRoute
+  '/more/downloads': typeof MoreDownloadsRoute
+  '/more/hijri-calendar': typeof MoreHijriCalendarRoute
+  '/more/islamic-education': typeof MoreIslamicEducationRoute
+  '/more/names': typeof MoreNamesRoute
+  '/more/prayer-times': typeof MorePrayerTimesRoute
+  '/more/qibla': typeof MoreQiblaRoute
+  '/more/quran-learning': typeof MoreQuranLearningRoute
+  '/more/ruqyah': typeof MoreRuqyahRoute
+  '/more/salat-nabi': typeof MoreSalatNabiRoute
+  '/more/settings': typeof MoreSettingsRoute
+  '/more/tasbeeh': typeof MoreTasbeehRoute
+  '/more/themes': typeof MoreThemesRoute
+  '/more/zakat-calculator': typeof MoreZakatCalculatorRoute
+  '/read/$surahNumber': typeof ReadSurahNumberRoute
+  '/read': typeof ReadIndexRoute
+  '/api/public/version': typeof ApiPublicVersionRoute
+  '/more/hadith/$book': typeof MoreHadithBookRoute
+  '/more/hadith': typeof MoreHadithIndexRoute
+  '/api/public/push/announce-update': typeof ApiPublicPushAnnounceUpdateRoute
+  '/api/public/push/cron': typeof ApiPublicPushCronRoute
+  '/api/public/push/subscribe': typeof ApiPublicPushSubscribeRoute
+  '/api/public/push/unsubscribe': typeof ApiPublicPushUnsubscribeRoute
+  '/api/public/tts/ruqyah': typeof ApiPublicTtsRuqyahRoute
+  '/api/public/tts/salat-nabi.mp3': typeof ApiPublicTtsSalatNabiDotmp3Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/data-policy': typeof DataPolicyRoute
+  '/favorites': typeof FavoritesRoute
+  '/listen': typeof ListenRoute
+  '/privacy': typeof PrivacyRoute
+  '/progress': typeof ProgressRoute
+  '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
+  '/more/athkar': typeof MoreAthkarRoute
+  '/more/downloads': typeof MoreDownloadsRoute
+  '/more/hijri-calendar': typeof MoreHijriCalendarRoute
+  '/more/islamic-education': typeof MoreIslamicEducationRoute
+  '/more/names': typeof MoreNamesRoute
+  '/more/prayer-times': typeof MorePrayerTimesRoute
+  '/more/qibla': typeof MoreQiblaRoute
+  '/more/quran-learning': typeof MoreQuranLearningRoute
+  '/more/ruqyah': typeof MoreRuqyahRoute
+  '/more/salat-nabi': typeof MoreSalatNabiRoute
+  '/more/settings': typeof MoreSettingsRoute
+  '/more/tasbeeh': typeof MoreTasbeehRoute
+  '/more/themes': typeof MoreThemesRoute
+  '/more/zakat-calculator': typeof MoreZakatCalculatorRoute
+  '/read/$surahNumber': typeof ReadSurahNumberRoute
+  '/read/': typeof ReadIndexRoute
+  '/api/public/version': typeof ApiPublicVersionRoute
+  '/more/hadith/$book': typeof MoreHadithBookRoute
+  '/more/hadith/': typeof MoreHadithIndexRoute
+  '/api/public/push/announce-update': typeof ApiPublicPushAnnounceUpdateRoute
+  '/api/public/push/cron': typeof ApiPublicPushCronRoute
+  '/api/public/push/subscribe': typeof ApiPublicPushSubscribeRoute
+  '/api/public/push/unsubscribe': typeof ApiPublicPushUnsubscribeRoute
+  '/api/public/tts/ruqyah': typeof ApiPublicTtsRuqyahRoute
+  '/api/public/tts/salat-nabi.mp3': typeof ApiPublicTtsSalatNabiDotmp3Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/data-policy'
+    | '/favorites'
+    | '/listen'
+    | '/privacy'
+    | '/progress'
+    | '/search'
+    | '/terms'
+    | '/more/athkar'
+    | '/more/downloads'
+    | '/more/hijri-calendar'
+    | '/more/islamic-education'
+    | '/more/names'
+    | '/more/prayer-times'
+    | '/more/qibla'
+    | '/more/quran-learning'
+    | '/more/ruqyah'
+    | '/more/salat-nabi'
+    | '/more/settings'
+    | '/more/tasbeeh'
+    | '/more/themes'
+    | '/more/zakat-calculator'
+    | '/read/$surahNumber'
+    | '/read/'
+    | '/api/public/version'
+    | '/more/hadith/$book'
+    | '/more/hadith/'
+    | '/api/public/push/announce-update'
+    | '/api/public/push/cron'
+    | '/api/public/push/subscribe'
+    | '/api/public/push/unsubscribe'
+    | '/api/public/tts/ruqyah'
+    | '/api/public/tts/salat-nabi.mp3'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/auth'
+    | '/data-policy'
+    | '/favorites'
+    | '/listen'
+    | '/privacy'
+    | '/progress'
+    | '/search'
+    | '/terms'
+    | '/more/athkar'
+    | '/more/downloads'
+    | '/more/hijri-calendar'
+    | '/more/islamic-education'
+    | '/more/names'
+    | '/more/prayer-times'
+    | '/more/qibla'
+    | '/more/quran-learning'
+    | '/more/ruqyah'
+    | '/more/salat-nabi'
+    | '/more/settings'
+    | '/more/tasbeeh'
+    | '/more/themes'
+    | '/more/zakat-calculator'
+    | '/read/$surahNumber'
+    | '/read'
+    | '/api/public/version'
+    | '/more/hadith/$book'
+    | '/more/hadith'
+    | '/api/public/push/announce-update'
+    | '/api/public/push/cron'
+    | '/api/public/push/subscribe'
+    | '/api/public/push/unsubscribe'
+    | '/api/public/tts/ruqyah'
+    | '/api/public/tts/salat-nabi.mp3'
+  id:
+    | '__root__'
+    | '/'
+    | '/auth'
+    | '/data-policy'
+    | '/favorites'
+    | '/listen'
+    | '/privacy'
+    | '/progress'
+    | '/search'
+    | '/terms'
+    | '/more/athkar'
+    | '/more/downloads'
+    | '/more/hijri-calendar'
+    | '/more/islamic-education'
+    | '/more/names'
+    | '/more/prayer-times'
+    | '/more/qibla'
+    | '/more/quran-learning'
+    | '/more/ruqyah'
+    | '/more/salat-nabi'
+    | '/more/settings'
+    | '/more/tasbeeh'
+    | '/more/themes'
+    | '/more/zakat-calculator'
+    | '/read/$surahNumber'
+    | '/read/'
+    | '/api/public/version'
+    | '/more/hadith/$book'
+    | '/more/hadith/'
+    | '/api/public/push/announce-update'
+    | '/api/public/push/cron'
+    | '/api/public/push/subscribe'
+    | '/api/public/push/unsubscribe'
+    | '/api/public/tts/ruqyah'
+    | '/api/public/tts/salat-nabi.mp3'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthRoute: typeof AuthRoute
+  DataPolicyRoute: typeof DataPolicyRoute
+  FavoritesRoute: typeof FavoritesRoute
+  ListenRoute: typeof ListenRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ProgressRoute: typeof ProgressRoute
+  SearchRoute: typeof SearchRoute
+  TermsRoute: typeof TermsRoute
+  MoreAthkarRoute: typeof MoreAthkarRoute
+  MoreDownloadsRoute: typeof MoreDownloadsRoute
+  MoreHijriCalendarRoute: typeof MoreHijriCalendarRoute
+  MoreIslamicEducationRoute: typeof MoreIslamicEducationRoute
+  MoreNamesRoute: typeof MoreNamesRoute
+  MorePrayerTimesRoute: typeof MorePrayerTimesRoute
+  MoreQiblaRoute: typeof MoreQiblaRoute
+  MoreQuranLearningRoute: typeof MoreQuranLearningRoute
+  MoreRuqyahRoute: typeof MoreRuqyahRoute
+  MoreSalatNabiRoute: typeof MoreSalatNabiRoute
+  MoreSettingsRoute: typeof MoreSettingsRoute
+  MoreTasbeehRoute: typeof MoreTasbeehRoute
+  MoreThemesRoute: typeof MoreThemesRoute
+  MoreZakatCalculatorRoute: typeof MoreZakatCalculatorRoute
+  ReadSurahNumberRoute: typeof ReadSurahNumberRoute
+  ReadIndexRoute: typeof ReadIndexRoute
+  ApiPublicVersionRoute: typeof ApiPublicVersionRoute
+  MoreHadithBookRoute: typeof MoreHadithBookRoute
+  MoreHadithIndexRoute: typeof MoreHadithIndexRoute
+  ApiPublicPushAnnounceUpdateRoute: typeof ApiPublicPushAnnounceUpdateRoute
+  ApiPublicPushCronRoute: typeof ApiPublicPushCronRoute
+  ApiPublicPushSubscribeRoute: typeof ApiPublicPushSubscribeRoute
+  ApiPublicPushUnsubscribeRoute: typeof ApiPublicPushUnsubscribeRoute
+  ApiPublicTtsRuqyahRoute: typeof ApiPublicTtsRuqyahRoute
+  ApiPublicTtsSalatNabiDotmp3Route: typeof ApiPublicTtsSalatNabiDotmp3Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/progress': {
+      id: '/progress'
+      path: '/progress'
+      fullPath: '/progress'
+      preLoaderRoute: typeof ProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/listen': {
+      id: '/listen'
+      path: '/listen'
+      fullPath: '/listen'
+      preLoaderRoute: typeof ListenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favorites': {
+      id: '/favorites'
+      path: '/favorites'
+      fullPath: '/favorites'
+      preLoaderRoute: typeof FavoritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data-policy': {
+      id: '/data-policy'
+      path: '/data-policy'
+      fullPath: '/data-policy'
+      preLoaderRoute: typeof DataPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +540,220 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/read/': {
+      id: '/read/'
+      path: '/read'
+      fullPath: '/read/'
+      preLoaderRoute: typeof ReadIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/read/$surahNumber': {
+      id: '/read/$surahNumber'
+      path: '/read/$surahNumber'
+      fullPath: '/read/$surahNumber'
+      preLoaderRoute: typeof ReadSurahNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/zakat-calculator': {
+      id: '/more/zakat-calculator'
+      path: '/more/zakat-calculator'
+      fullPath: '/more/zakat-calculator'
+      preLoaderRoute: typeof MoreZakatCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/themes': {
+      id: '/more/themes'
+      path: '/more/themes'
+      fullPath: '/more/themes'
+      preLoaderRoute: typeof MoreThemesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/tasbeeh': {
+      id: '/more/tasbeeh'
+      path: '/more/tasbeeh'
+      fullPath: '/more/tasbeeh'
+      preLoaderRoute: typeof MoreTasbeehRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/settings': {
+      id: '/more/settings'
+      path: '/more/settings'
+      fullPath: '/more/settings'
+      preLoaderRoute: typeof MoreSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/salat-nabi': {
+      id: '/more/salat-nabi'
+      path: '/more/salat-nabi'
+      fullPath: '/more/salat-nabi'
+      preLoaderRoute: typeof MoreSalatNabiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/ruqyah': {
+      id: '/more/ruqyah'
+      path: '/more/ruqyah'
+      fullPath: '/more/ruqyah'
+      preLoaderRoute: typeof MoreRuqyahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/quran-learning': {
+      id: '/more/quran-learning'
+      path: '/more/quran-learning'
+      fullPath: '/more/quran-learning'
+      preLoaderRoute: typeof MoreQuranLearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/qibla': {
+      id: '/more/qibla'
+      path: '/more/qibla'
+      fullPath: '/more/qibla'
+      preLoaderRoute: typeof MoreQiblaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/prayer-times': {
+      id: '/more/prayer-times'
+      path: '/more/prayer-times'
+      fullPath: '/more/prayer-times'
+      preLoaderRoute: typeof MorePrayerTimesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/names': {
+      id: '/more/names'
+      path: '/more/names'
+      fullPath: '/more/names'
+      preLoaderRoute: typeof MoreNamesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/islamic-education': {
+      id: '/more/islamic-education'
+      path: '/more/islamic-education'
+      fullPath: '/more/islamic-education'
+      preLoaderRoute: typeof MoreIslamicEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/hijri-calendar': {
+      id: '/more/hijri-calendar'
+      path: '/more/hijri-calendar'
+      fullPath: '/more/hijri-calendar'
+      preLoaderRoute: typeof MoreHijriCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/downloads': {
+      id: '/more/downloads'
+      path: '/more/downloads'
+      fullPath: '/more/downloads'
+      preLoaderRoute: typeof MoreDownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/athkar': {
+      id: '/more/athkar'
+      path: '/more/athkar'
+      fullPath: '/more/athkar'
+      preLoaderRoute: typeof MoreAthkarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/hadith/': {
+      id: '/more/hadith/'
+      path: '/more/hadith'
+      fullPath: '/more/hadith/'
+      preLoaderRoute: typeof MoreHadithIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/more/hadith/$book': {
+      id: '/more/hadith/$book'
+      path: '/more/hadith/$book'
+      fullPath: '/more/hadith/$book'
+      preLoaderRoute: typeof MoreHadithBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/version': {
+      id: '/api/public/version'
+      path: '/api/public/version'
+      fullPath: '/api/public/version'
+      preLoaderRoute: typeof ApiPublicVersionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/tts/salat-nabi.mp3': {
+      id: '/api/public/tts/salat-nabi.mp3'
+      path: '/api/public/tts/salat-nabi.mp3'
+      fullPath: '/api/public/tts/salat-nabi.mp3'
+      preLoaderRoute: typeof ApiPublicTtsSalatNabiDotmp3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/tts/ruqyah': {
+      id: '/api/public/tts/ruqyah'
+      path: '/api/public/tts/ruqyah'
+      fullPath: '/api/public/tts/ruqyah'
+      preLoaderRoute: typeof ApiPublicTtsRuqyahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/push/unsubscribe': {
+      id: '/api/public/push/unsubscribe'
+      path: '/api/public/push/unsubscribe'
+      fullPath: '/api/public/push/unsubscribe'
+      preLoaderRoute: typeof ApiPublicPushUnsubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/push/subscribe': {
+      id: '/api/public/push/subscribe'
+      path: '/api/public/push/subscribe'
+      fullPath: '/api/public/push/subscribe'
+      preLoaderRoute: typeof ApiPublicPushSubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/push/cron': {
+      id: '/api/public/push/cron'
+      path: '/api/public/push/cron'
+      fullPath: '/api/public/push/cron'
+      preLoaderRoute: typeof ApiPublicPushCronRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/push/announce-update': {
+      id: '/api/public/push/announce-update'
+      path: '/api/public/push/announce-update'
+      fullPath: '/api/public/push/announce-update'
+      preLoaderRoute: typeof ApiPublicPushAnnounceUpdateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthRoute: AuthRoute,
+  DataPolicyRoute: DataPolicyRoute,
+  FavoritesRoute: FavoritesRoute,
+  ListenRoute: ListenRoute,
+  PrivacyRoute: PrivacyRoute,
+  ProgressRoute: ProgressRoute,
+  SearchRoute: SearchRoute,
+  TermsRoute: TermsRoute,
+  MoreAthkarRoute: MoreAthkarRoute,
+  MoreDownloadsRoute: MoreDownloadsRoute,
+  MoreHijriCalendarRoute: MoreHijriCalendarRoute,
+  MoreIslamicEducationRoute: MoreIslamicEducationRoute,
+  MoreNamesRoute: MoreNamesRoute,
+  MorePrayerTimesRoute: MorePrayerTimesRoute,
+  MoreQiblaRoute: MoreQiblaRoute,
+  MoreQuranLearningRoute: MoreQuranLearningRoute,
+  MoreRuqyahRoute: MoreRuqyahRoute,
+  MoreSalatNabiRoute: MoreSalatNabiRoute,
+  MoreSettingsRoute: MoreSettingsRoute,
+  MoreTasbeehRoute: MoreTasbeehRoute,
+  MoreThemesRoute: MoreThemesRoute,
+  MoreZakatCalculatorRoute: MoreZakatCalculatorRoute,
+  ReadSurahNumberRoute: ReadSurahNumberRoute,
+  ReadIndexRoute: ReadIndexRoute,
+  ApiPublicVersionRoute: ApiPublicVersionRoute,
+  MoreHadithBookRoute: MoreHadithBookRoute,
+  MoreHadithIndexRoute: MoreHadithIndexRoute,
+  ApiPublicPushAnnounceUpdateRoute: ApiPublicPushAnnounceUpdateRoute,
+  ApiPublicPushCronRoute: ApiPublicPushCronRoute,
+  ApiPublicPushSubscribeRoute: ApiPublicPushSubscribeRoute,
+  ApiPublicPushUnsubscribeRoute: ApiPublicPushUnsubscribeRoute,
+  ApiPublicTtsRuqyahRoute: ApiPublicTtsRuqyahRoute,
+  ApiPublicTtsSalatNabiDotmp3Route: ApiPublicTtsSalatNabiDotmp3Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
