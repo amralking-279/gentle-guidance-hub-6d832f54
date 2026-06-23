@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Settings, Share2, MapPin, BookOpen, Compass, Calculator, Heart, Users, BookMarked, Sunrise, Sparkles } from 'lucide-react';
+import { Settings2, Share2, MapPin, BookOpenText, Compass, Calculator, HeartHandshake, GraduationCap, BookMarked, Sunrise, Sparkles, Clock4 } from 'lucide-react';
 import { usePrayerData, formatCountdown, to12hArabic, type PrayerKey } from '@/hooks/usePrayerData';
 import headerBg from '@/assets/prayer-now-header.jpg';
 
@@ -13,10 +13,10 @@ const PRAYER_ROW: { key: PrayerKey; label: string; emoji: string }[] = [
 
 const FEATURES = [
   { to: '/more/qibla', label: 'اتجاه القبلة', Icon: Compass },
-  { to: '/more/tasbeeh', label: 'السبحة', Icon: Heart },
+  { to: '/more/tasbeeh', label: 'السبحة', Icon: HeartHandshake },
   { to: '/progress', label: 'الختمة', Icon: BookMarked },
-  { to: '/more/prayer-times', label: 'متتبع الصلاة', Icon: BookOpen },
-  { to: '/more/islamic-education', label: 'تعليم إسلامي', Icon: Users },
+  { to: '/more/prayer-times', label: 'متتبع الصلاة', Icon: Clock4 },
+  { to: '/more/islamic-education', label: 'تعليم إسلامي', Icon: GraduationCap },
   { to: '/more/zakat-calculator', label: 'حاسبة الزكاة', Icon: Calculator },
 ];
 
@@ -72,7 +72,7 @@ export function PrayerNowHome() {
           className="absolute top-3 left-3 w-9 h-9 rounded-full bg-black/35 backdrop-blur-md text-white flex items-center justify-center hover:bg-black/50 transition"
           aria-label="إعدادات الشكل"
         >
-          <Settings className="w-5 h-5" />
+          <Settings2 className="w-5 h-5" />
         </Link>
         <button
           className="absolute top-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-amber-400/95 text-amber-950 px-3 py-1 font-cairo text-[11px] font-bold shadow"

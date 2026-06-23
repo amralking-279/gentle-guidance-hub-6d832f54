@@ -26,6 +26,7 @@ import { AppSplashScreen } from "@/components/native/SplashScreen";
 import { NativeBackHandler } from "@/components/native/NativeBackHandler";
 import { Toaster } from "@/components/ui/sonner";
 import { PrayerNowBottomTab } from "@/components/templates/PrayerNowBottomTab";
+import { ThemeQuickButton } from "@/components/ui-custom/ThemeQuickButton";
 import {
   readStoredAppTemplate,
   type AppTemplateId,
@@ -179,7 +180,12 @@ function RootComponent() {
               <UpdateReminder />
               <NativeBackHandler />
               <Toaster position="top-center" richColors closeButton dir="rtl" />
-              {template === "prayer-now" && <PrayerNowBottomTab />}
+              {template === "prayer-now" && (
+                <>
+                  <ThemeQuickButton />
+                  <PrayerNowBottomTab />
+                </>
+              )}
             </AudioProvider>
           </ProgressProvider>
         </FavoritesProvider>
