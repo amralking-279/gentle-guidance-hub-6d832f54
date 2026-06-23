@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router';
 import { Settings2, Share2, MapPin, BookOpenText, Compass, Calculator, HeartHandshake, GraduationCap, BookMarked, Sunrise, Sparkles, Clock4 } from 'lucide-react';
 import { usePrayerData, formatCountdown, to12hArabic, type PrayerKey } from '@/hooks/usePrayerData';
-import headerBg from '@/assets/prayer-now-header.jpg';
+import headerBg from '@/assets/fajr-header.jpg';
 
 const PRAYER_ROW: { key: PrayerKey; label: string; emoji: string }[] = [
   { key: 'Fajr', label: 'الفجر', emoji: '🌙' },
@@ -20,7 +20,7 @@ const FEATURES = [
   { to: '/more/zakat-calculator', label: 'حاسبة الزكاة', Icon: Calculator },
 ];
 
-export function PrayerNowHome() {
+export function FajrHome() {
   const data = usePrayerData();
   const remaining = data.next?.remainingMs ?? 0;
 

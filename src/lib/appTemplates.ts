@@ -1,4 +1,4 @@
-export type AppTemplateId = 'classic' | 'prayer-now';
+export type AppTemplateId = 'classic' | 'fajr';
 
 export type AppTemplate = {
   id: AppTemplateId;
@@ -13,7 +13,7 @@ export const APP_TEMPLATES: AppTemplate[] = [
     description: 'الواجهة الأصلية الزمردية مع البطل والأقسام التعريفية وقائمة السور.',
   },
   {
-    id: 'prayer-now',
+    id: 'fajr',
     nameAr: 'قالب الفجر',
     description: 'واجهة عصرية بهيدر شروق صحراوي وعدّاد تنازلي للصلاة القادمة، أوقات صلاة أفقية، شبكة ميزات، وتاب بار سفلي ثابت.',
   },
@@ -21,7 +21,7 @@ export const APP_TEMPLATES: AppTemplate[] = [
 
 export const APP_TEMPLATE_STORAGE_KEY = 'app:template';
 export const DEFAULT_APP_TEMPLATE: AppTemplateId = 'classic';
-const ALL_IDS: AppTemplateId[] = ['classic', 'prayer-now'];
+const ALL_IDS: AppTemplateId[] = ['classic', 'fajr'];
 const ALL_CLASSES = ALL_IDS.map((id) => `app-template-${id}`);
 
 export function applyAppTemplate(id: AppTemplateId) {
@@ -34,7 +34,9 @@ export function applyAppTemplate(id: AppTemplateId) {
 export function readStoredAppTemplate(): AppTemplateId {
   if (typeof window === 'undefined') return DEFAULT_APP_TEMPLATE;
   try {
-    const v = window.localStorage.getItem(APP_TEMPLATE_STORAGE_KEY) as AppTemplateId | null;
+    const v = window.localStorage.getItem(APP_TEMPLATE_STORAGE_KEY) as AppTemplateId | 'prayer-now' | null;
+    // Legacy template id renamed from "prayer-now" to "fajr".
+    if (v === 'prayer-now') return 'fajr';
     if (v && ALL_IDS.includes(v)) return v;
   } catch { /* ignore */ }
   return DEFAULT_APP_TEMPLATE;

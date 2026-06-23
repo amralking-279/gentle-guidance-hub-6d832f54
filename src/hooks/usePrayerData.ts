@@ -75,7 +75,7 @@ export function usePrayerData(): PrayerData {
       try {
         let lat = 30.0444;
         let lon = 31.2357; // Cairo fallback
-        const cached = localStorage.getItem('prayer-now:loc');
+        const cached = localStorage.getItem('fajr:loc') || localStorage.getItem('prayer-now:loc');
         if (cached) {
           const c = JSON.parse(cached);
           lat = c.lat; lon = c.lon; setCity(c.city || '');
@@ -107,7 +107,7 @@ export function usePrayerData(): PrayerData {
             const a = d?.address || {};
             const c = [a.city || a.town || a.village || a.county || '', a.state || a.country || ''].filter(Boolean).join('، ');
             setCity(c);
-            localStorage.setItem('prayer-now:loc', JSON.stringify({ lat, lon, city: c }));
+            localStorage.setItem('fajr:loc', JSON.stringify({ lat, lon, city: c }));
           } catch { /* ignore */ }
         }
       } catch (e) {

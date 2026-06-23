@@ -9,7 +9,7 @@ const TABS = [
   { to: '/read', label: 'القرآن', Icon: BookOpenText },
 ] as const;
 
-export function PrayerNowBottomTab() {
+export function FajrBottomTab() {
   return (
     <nav
       className="app-template-tab fixed bottom-0 left-0 right-0 z-40"

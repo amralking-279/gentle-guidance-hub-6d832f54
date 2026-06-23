@@ -25,7 +25,7 @@ import { UpdateReminder } from "@/components/ui-custom/UpdateReminder";
 import { AppSplashScreen } from "@/components/native/SplashScreen";
 import { NativeBackHandler } from "@/components/native/NativeBackHandler";
 import { Toaster } from "@/components/ui/sonner";
-import { PrayerNowBottomTab } from "@/components/templates/PrayerNowBottomTab";
+import { FajrBottomTab } from "@/components/templates/FajrBottomTab";
 import { ThemeQuickButton } from "@/components/ui-custom/ThemeQuickButton";
 import {
   readStoredAppTemplate,
